@@ -1,0 +1,115 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1351834008123017042
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1351834008123017053}
+  m_Layer: 0
+  m_Name: Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1351834008123017053
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1351834008123017042}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1351834009124009924}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1351834009124009946
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1351834009124009924}
+  - component: {fileID: 1351834009124009925}
+  m_Layer: 0
+  m_Name: RoomGenerator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1351834009124009924
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1351834009124009946}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1351834008123017053}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1351834009124009925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1351834009124009946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14a60bd35ce489c46bababd31795d853, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roomType:
+  - NormalRoom
+  - StartRoom
+  - EndRoom
+  direction: 0
+  rooms: []
+  roomPrefab: {fileID: 7473083582909932181, guid: a76acdaefc81de243a78378508bafefe, type: 3}
+  roomNumber: 15
+  startColor: {r: 0.34901962, g: 1, b: 0.20392157, a: 1}
+  endColor: {r: 1, g: 0.20392156, b: 0.28089112, a: 1}
+  startRoom: {fileID: 0}
+  endRoom: {fileID: 0}
+  generatorPoint: {fileID: 1351834008123017053}
+  xOffset: 20
+  yOffset: 12
+  roomLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  wallType:
+    singleLeft: {fileID: 7829230351349913333, guid: 12f8d10cdaca000489a3eaa9e5752a7d, type: 3}
+    singleRight: {fileID: 7829230351349913333, guid: 62d027daf00d86c4bb5329a0a84cc93f, type: 3}
+    singleUp: {fileID: 7829230351349913333, guid: 31cd759c0f73da942bc1a51554e7d5b3, type: 3}
+    singleDown: {fileID: 7829230351349913333, guid: f5b302904a965404a9fe45cc61f052e8, type: 3}
+    doubleUL: {fileID: 7829230351349913333, guid: 9ee0a22da67c08c4a99777eb40239cd4, type: 3}
+    doubleUR: {fileID: 7829230351349913333, guid: 17dc19322c7b2f341929213e03bf6830, type: 3}
+    doubleUD: {fileID: 7829230351349913333, guid: b581b887ee56d0245bbde53d8b2ec188, type: 3}
+    doubleDL: {fileID: 7829230351349913333, guid: a7756128950628b4a9bb6af9dde2e3d9, type: 3}
+    doubleDR: {fileID: 7829230351349913333, guid: 24e517a2b9940a64e803bc9aec3f29f4, type: 3}
+    doubleLR: {fileID: 7829230351349913333, guid: c5f27e93ca9e02c4e9334c91ac19950e, type: 3}
+    tripleUDL: {fileID: 7829230351349913333, guid: ee69b5f1240b7d043bf1719e8443c885, type: 3}
+    tripleUDR: {fileID: 7829230351349913333, guid: 87d542df77b4a6749adcc7fc1ae7ad2e, type: 3}
+    tripleULR: {fileID: 7829230351349913333, guid: a2e63e9dba705a345bcb8d66c5cecdf8, type: 3}
+    tripleDLR: {fileID: 7829230351349913333, guid: 0c71e8259452cb04894bc65ea87d4e5e, type: 3}
+    fourUDLR: {fileID: 7829230351349913333, guid: 9bdbb1c8810b05048a4b32410989df1e, type: 3}
+  enemyMinNum: 2
+  enemyMaxNum: 5
+  playerPrefab: {fileID: 3178869850529104804, guid: 6d136f3368b83b84bbe176bf66903aa0, type: 3}
